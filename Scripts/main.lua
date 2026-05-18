@@ -1,6 +1,6 @@
 -- ============================================================
 --  Retro Rewind - Market QoL
---  Version: 1.4
+--  Version: 1.4.1
 --
 --  Generates additional bundles in the shop each day based
 --  on your configuration. Bundles are appended after the

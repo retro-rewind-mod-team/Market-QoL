@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.1
+- Added Market-QoL.yaml for RRMM (Retro Rewind Mod Manager) support
+
 ## 1.4
 - Fixed a bug where reloading a save file reset the Lua VM state, causing `hasInjectedToday`
   to be `false` even though bundles were already written to disk — a subsequent manual save

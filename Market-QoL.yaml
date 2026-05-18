@@ -1,0 +1,84 @@
+# ── Required Fields ───────────────────────────────────────────────────────────
+
+name: "Market - QoL"
+author: "Xerduntis"
+version: "1.4.1" # SemVer: major.minor.patch
+mod_type: lua
+
+# ── Optional Fields ───────────────────────────────────────────────────────────
+
+description: "Adds configurable movie bundles to the shop computer every day. Genres unlock with store level, matching the game's progression curve. Set genre, size, and count per entry. Bundles persist across reloads without duplicating."
+
+# Nexus Mods IDs — used for update checking.
+
+nexus_id: 120
+nexus_file_id: 1778776338
+
+config:
+
+ - key: freeAll
+   label: "Enable Free Bundles"
+   description: "Makes all bundles free, not recommended. NOTE: FREE BUNDLES PERSIST IF NOT REDEEMED"
+   type: bool
+   default: false
+
+ - key: ignoreLevelCurve
+   label: "Disable Level Curve"
+   description: "Deactivates the level curve, making all categories available."
+   type: bool
+   default: false
+
+ - key: enableAdult
+   label: "Enable Adult"
+   description: "Enabled adult bundles in the market. NOTE: NORMALLY NOT AVAILABLE"
+   type: bool
+   default: false
+
+ - key: Debug
+   label: "Enable Debug"
+   description: "Toggles debugging to diagnose issues."
+   type: bool
+   default: false
+
+ - key: bundles
+   label: "Bundles"
+   description: "Rental bundle configuration per genre."
+   type: table
+   columns:
+     - key: genre
+       label: "Genre"
+       type: enum
+       values:
+         - Mixed
+         - Action
+         - Drama
+         - Horror
+         - Sci-Fi
+         - Romance
+         - Police
+         - Adult
+         - Western
+         - Xmas
+         - Comedy
+         - Fantasy
+         - Kids
+     - key: size
+       label: "Size"
+       type: int
+     - key: count
+       label: "Count"
+       type: int
+   default:
+     - { genre: Mixed,   size: 10, count: 1 }
+     - { genre: Action,  size: 15, count: 1 }
+     - { genre: Drama,   size: 15, count: 1 }
+     - { genre: Horror,  size: 15, count: 1 }
+     - { genre: Sci-Fi,  size: 15, count: 1 }
+     - { genre: Romance, size: 15, count: 1 }
+     - { genre: Police,  size: 15, count: 1 }
+     - { genre: Adult,   size: 15, count: 1 }
+     - { genre: Western, size: 15, count: 1 }
+     - { genre: Xmas,    size: 15, count: 1 }
+     - { genre: Comedy,  size: 15, count: 1 }
+     - { genre: Fantasy, size: 20, count: 1 }
+     - { genre: Kids,    size: 15, count: 1 }
